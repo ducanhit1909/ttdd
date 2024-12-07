@@ -32,6 +32,9 @@ object.dot {
   width: 100%;
 }
 
+.pdtb-42 {
+  padding: 42px 0;
+}
 .page {
   display: flex;
   flex-direction: column;
@@ -66,10 +69,15 @@ object {
   margin: 42px 0;
 }
 
+.feature-content {
+  padding-bottom: 42px;
+}
+
 .feature-media {
-  display: flex;
-  gap: 38px;
-  margin: 42px ;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 24px;
+  width: 100%;
 }
 
 .feature-item:last-child {
@@ -94,6 +102,7 @@ object {
 
 .bg-section img {
   object-fit: contain;
+  height: auto;
 }
 
 .desc-content {
@@ -144,10 +153,11 @@ object {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  margin-top: 5%;
 }
 
 .quote-block {
-  width: 100%;
+  width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,7 +176,6 @@ object {
 }
 
 .img-full-section {
-  margin: 42px 0;
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 24px;
