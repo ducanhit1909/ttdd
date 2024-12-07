@@ -91,6 +91,10 @@ object {
   width: 80%;
 }
 
+.bg-section img {
+  object-fit: contain;
+}
+
 .desc-content {
   clear: both;
 }
@@ -134,8 +138,20 @@ object {
   height: auto;
 }
 
+.sec-end {
+  background-image: url("./assets/svg/end-bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
 @media only screen and (max-width: 1024px) {
   .container {
     max-width: 100%;
+  }
+
+  .bg-section img {
+    object-fit: cover;
+    height: auto;
   }
 }
