@@ -70,14 +70,14 @@ object {
 }
 
 .feature-content {
-  padding-bottom: 42px;
 }
 
 .feature-media {
   display: grid;
-  grid-template-columns: auto auto;
   grid-gap: 24px;
   width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 4%;
 }
 
 .feature-item:last-child {
@@ -153,7 +153,7 @@ object {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  margin-top: 5%;
+  margin-top: 6%;
 }
 
 .quote-block {
