@@ -1,6 +1,7 @@
 :root {
-  --separator-line: #E0D7D2;
+  --star: #E0D7D2;
   --layer-bg: #EAEAE9;
+  --quote-bar: #9D8A7F;
 }
 
 * {
@@ -106,7 +107,7 @@ object {
 .separator-left {
   width: 33%;
   height: 12px;
-  background-color: var(--separator-line);
+  background-color: var(--star);
   float: left;
   margin: 24px 0;
   display: block;
@@ -115,7 +116,7 @@ object {
 .separator-right {
   width: 33%;
   height: 12px;
-  background-color: var(--separator-line);
+  background-color: var(--star);
   float: right;
   margin: 24px 0;
   display: block;
@@ -143,6 +144,37 @@ object {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.quote-block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.quote-box {
+  padding: 38px 12%;
+  background-color: var(--star);
+}
+
+.quote-bar {
+  width: 50%;
+  height: 14px;
+  background: var(--quote-bar);
+}
+
+.img-full-section {
+  margin: 42px 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 24px;
+}
+
+.img-full-section img {
+  width: 100%;
+  height: auto;
 }
 
 @media only screen and (max-width: 1024px) {
