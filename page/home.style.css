@@ -11,6 +11,7 @@
 
 body {
   background-color: var(--layer-bg);
+  overflow-x: hidden;
 }
 
 object.dot {
@@ -43,7 +44,7 @@ object.dot {
 }
 
 .container {
-  max-width: 75%;
+  max-width: 100%;
 }
 
 section {
@@ -52,6 +53,20 @@ section {
 
 object {
   width: 100%;
+}
+
+.object-animation {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 3s ease-out, transform 3s ease-out;
+  position: relative;
+  z-index: 0;
+}
+
+.object-animation.visible {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: -1;
 }
 
 .top-tagline {
@@ -67,6 +82,9 @@ object {
 
 .feature {
   margin: 42px 0;
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 42px 15px;
 }
 
 .feature-content {
@@ -141,6 +159,38 @@ object {
   flex-direction: column;
   gap: 24px;
 }
+
+.camera-section {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.camera-section.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.col.left {
+  transform: translateX(-50px);
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.col.right {
+  transform: translateX(50px);
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.camera-section.animate .col.left {
+  transform: translateX(0);
+}
+
+.camera-section.animate .col.right {
+  transform: translateX(0);
+}
+
 
 .img-item img {
   width: 100%;
